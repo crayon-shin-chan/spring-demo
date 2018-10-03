@@ -5,8 +5,8 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.AliasFor;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -16,6 +16,7 @@ import java.util.Iterator;
  * 最简单的BeanFactory示例
  */
 @Configuration
+@ComponentScan("czy.demo.beanfactory.simple")
 public class BeanFactoryTest {
 
     /* 配置Bean,名称为方法名 */
@@ -29,18 +30,6 @@ public class BeanFactoryTest {
     public Person person1(){
         return new Person("李四");
     }
-
-    /* 这个Bean的参数name为容器注入 */
-    @Bean
-    public Person custom(String name){
-        return new Person(name);
-    }
-
-    @Bean
-    public String name(){
-        return new String("hehe");
-    }
-
 
 
     public static void main(String[] args){
@@ -70,8 +59,9 @@ public class BeanFactoryTest {
         //factory.getBean(Person.class).say();
 
         /*获取指定名称Bean,并且使用构造函数参数覆盖默认参数,这里没有成功,使用@Bean注解的方法好像不能这样注入,应该可以在Component形式使用*/
+        /*只有@Component,@Scope('prototype')注解的Bean可以通过这种方式获取*/
         say("通过名称获取Bean,并且注入构造参数");
-        ((Person)factory.getBean("custom","定制用户")).say();
+        ((Person)factory.getBean("hehehehehe","定制用户")).say();
         say("");
 
         say("获取Bean的对象供应商");
