@@ -1,4 +1,4 @@
-package czy.demo.primary;
+package czy.demo.bean.primary;
 
 public class Person {
 

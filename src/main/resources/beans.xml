@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="default" class="czy.demo.resource.Person"></bean>
+
+    <bean id="zhangsan" class="czy.demo.resource.Person">
+        <constructor-arg value="15"></constructor-arg>
+        <constructor-arg value="张三"></constructor-arg>
+    </bean>
+
+    <bean id="lisi" class="czy.demo.resource.Person">
+        <property name="age" value="20"></property>
+        <property name="name" value="lisi"></property>
+    </bean>
+
+</beans>
+

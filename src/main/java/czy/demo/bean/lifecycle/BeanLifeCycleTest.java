@@ -1,4 +1,4 @@
-package czy.demo.lifecycle;
+package czy.demo.bean.lifecycle;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;

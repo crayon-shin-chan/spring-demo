@@ -1,4 +1,4 @@
-package czy.demo.lazyinit;
+package czy.demo.bean.lazyinit;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package czy.demo.lazyinit;
+package czy.demo.bean.lazyinit;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

@@ -1,4 +1,4 @@
-package czy.demo.factorybean;
+package czy.demo.bean.factorybean;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Component;

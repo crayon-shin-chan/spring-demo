@@ -1,4 +1,4 @@
-package czy.demo.factorybean;
+package czy.demo.bean.factorybean;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

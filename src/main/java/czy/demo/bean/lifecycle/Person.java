@@ -1,4 +1,4 @@
-package czy.demo.lifecycle;
+package czy.demo.bean.lifecycle;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;

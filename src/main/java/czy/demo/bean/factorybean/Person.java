@@ -1,4 +1,4 @@
-package czy.demo.factorybean;
+package czy.demo.bean.factorybean;
 
 public class Person {
 
