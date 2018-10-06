@@ -10,7 +10,7 @@ public class ClassPathResourceTest {
     public static void main(String[] args)throws Exception{
 
         /* 可以直接加载打包进类路径的资源文件 */
-        ClassPathResource resource = new ClassPathResource("beans.xml");
+        ClassPathResource resource = new ClassPathResource("czy/demo/resource/beans.xml");
         System.out.println("资源路径为: "+resource.getPath());
         System.out.println("资源是否存在: "+resource.exists());
         System.out.println("资源内容为: ");
