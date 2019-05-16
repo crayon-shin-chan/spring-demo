@@ -1,4 +1,4 @@
-package czy.demo.resource;
+package czy.demo.core.io;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassPathResource;

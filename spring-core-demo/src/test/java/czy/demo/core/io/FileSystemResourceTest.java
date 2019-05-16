@@ -1,4 +1,4 @@
-package czy.demo.resource;
+package czy.demo.core.io;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.FileSystemResource;
@@ -7,7 +7,6 @@ import org.springframework.util.ResourceUtils;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.IOException;
-import java.net.URLDecoder;
 
 
 public class FileSystemResourceTest {
