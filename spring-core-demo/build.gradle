@@ -1,0 +1,6 @@
+archivesBaseName = 'spring-core-demo'
+
+dependencies {
+    /* core为spring frameword的核心包，不依赖其他包 */
+    compile group: 'org.springframework', name: 'spring-core', version: "${springVersion}"
+}

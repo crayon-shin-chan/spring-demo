@@ -4,34 +4,46 @@ buildscript {
 	}
 }
 
-apply plugin: 'java'
-apply plugin: 'idea'
+/* 应用于所有子项目以及根项目的脚本 */
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'idea'
 
-group = 'czy.demo'
-archivesBaseName = 'spring-demo'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+	group = 'czy.demo'
+	archivesBaseName = 'spring-demo'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = 1.8
 
-repositories {
-	mavenCentral()
+    ext{
+        springVersion = '5.1.7.RELEASE'
+    }
+
+	repositories {
+		mavenCentral()
+	}
+	
+	dependencies {
+		
+		compile group: 'org.springframework', name: 'spring-beans', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-context', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-context-support', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-expression', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-aop', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-aspects', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-tx', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-jdbc', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-orm', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-web', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-webmvc', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-jms', version: "${springVersion}"
+		compile group: 'org.springframework', name: 'spring-messaging', version: "${springVersion}"
+		testCompile group: 'org.springframework', name: 'spring-test', version: "${springVersion}"
+	}
+
 }
 
+/* 只应用于子项目的脚本，这里的脚本内容，貌似只会在执行父项目任务时读取，如果直接执行子项目任务，好像不能读取 */
+subprojects {
 
-
-dependencies {
-	compile group: 'org.springframework', name: 'spring-core', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-beans', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-context', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-context-support', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-expression', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-aop', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-aspects', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-tx', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-orm', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-web', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-jms', version: '5.1.0.RELEASE'
-	compile group: 'org.springframework', name: 'spring-messaging', version: '5.1.0.RELEASE'
-	testCompile group: 'org.springframework', name: 'spring-test', version: '5.1.0.RELEASE'
 }
+
