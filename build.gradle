@@ -48,7 +48,8 @@ allprojects {
 		testCompile group: 'org.springframework', name: 'spring-test', version: "${springVersion}"
 		/* spring-test中junit为可选依赖 */
 		testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: "${junitVersion}"
-		testCompile group: 'org.junit.vintage', name: 'junit-vintage-engine', version: "${junitVersion}"
+		/* vintage引擎引用了junit4 */
+		//testCompile group: 'org.junit.vintage', name: 'junit-vintage-engine', version: "${junitVersion}"
 		/* gradle允许junit5需要此依赖 */
 		testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version:"${junitPlatformLauncherVersion}"
 	}
