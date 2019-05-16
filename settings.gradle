@@ -1,4 +1,5 @@
 rootProject.name = 'spring-demo'
 
+include ':spring-aop-demo'
 include ':spring-core-demo'
 include ':spring-context-demo'

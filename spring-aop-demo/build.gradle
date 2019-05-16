@@ -1,0 +1,8 @@
+archivesBaseName = 'spring-aop-demo'
+
+dependencies {
+
+    /* aop依赖beans、core包 */
+    compile group: 'org.springframework', name: 'spring-aop', version: "${springVersion}"
+    compile group: 'org.springframework', name: 'spring-aspects', version: "${springVersion}"
+}
