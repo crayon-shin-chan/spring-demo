@@ -1,0 +1,6 @@
+archivesBaseName = 'spring-context-demo'
+
+dependencies {
+    /* context为spring framework的上下文支持，依赖了core、beans、aop、expression等包 */
+	compile group: 'org.springframework', name: 'spring-context', version: "${springVersion}"
+}

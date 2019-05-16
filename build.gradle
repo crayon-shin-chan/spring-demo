@@ -16,16 +16,17 @@ allprojects {
 
     ext{
         springVersion = '5.1.7.RELEASE'
+		junitVersion = '5.4.2'
+		junitPlatformLauncherVersion = '1.4.2'
     }
 
 	repositories {
 		mavenCentral()
 	}
-	
+
 	dependencies {
-		
+
 		compile group: 'org.springframework', name: 'spring-beans', version: "${springVersion}"
-		compile group: 'org.springframework', name: 'spring-context', version: "${springVersion}"
 		compile group: 'org.springframework', name: 'spring-context-support', version: "${springVersion}"
 		compile group: 'org.springframework', name: 'spring-expression', version: "${springVersion}"
 		compile group: 'org.springframework', name: 'spring-aop', version: "${springVersion}"
@@ -38,6 +39,10 @@ allprojects {
 		compile group: 'org.springframework', name: 'spring-jms', version: "${springVersion}"
 		compile group: 'org.springframework', name: 'spring-messaging', version: "${springVersion}"
 		testCompile group: 'org.springframework', name: 'spring-test', version: "${springVersion}"
+		/* spring-test中junit为可选依赖 */
+		testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: "${junitVersion}"
+		/* gradle允许junit5需要此依赖 */
+		testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version:"${junitPlatformLauncherVersion}"
 	}
 
 }
