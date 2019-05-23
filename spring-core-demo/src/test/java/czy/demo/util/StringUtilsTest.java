@@ -163,8 +163,7 @@ public class StringUtilsTest {
     /* 从字符串中删除指定模式字符串 */
     @Test
     public void delete(){
-
-        String result1 = StringUtils.delete("banana","na");
+        String result1 = StringUtils.delete("nabanana","na");
         assertEquals("ba",result1);
     }
 
